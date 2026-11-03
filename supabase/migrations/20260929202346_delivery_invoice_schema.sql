@@ -1,0 +1,18 @@
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS delivery_status text DEFAULT 'pending';
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS qr_code text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS barcode text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS product_name text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS item_count integer DEFAULT 1;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS weight text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS delivery_fee numeric DEFAULT 0;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS dispatch_date timestamptz;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS expected_delivery_date date;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS customer_phone text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS customer_address text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS sender_name text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS sender_email text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS sender_phone text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS sender_address text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS delivery_location text;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS delivery_lat double precision;
+ALTER TABLE invoices ADD COLUMN IF NOT EXISTS delivery_lng double precision;
