@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --color-primary: #2d5016; --color-secondary: #a3c585; --color-accent: #d4a017; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f0; }
+::-webkit-scrollbar-thumb { background: #a3c585; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #5a8f3a; }
+.text-balance { text-wrap: balance; }
+.glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.glass-dark { background: rgba(45, 80, 22, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.delay-100 { animation-delay: 100ms; } .delay-200 { animation-delay: 200ms; } .delay-300 { animation-delay: 300ms; } .delay-400 { animation-delay: 400ms; } .delay-500 { animation-delay: 500ms; } .delay-700 { animation-delay: 700ms; } .delay-1000 { animation-delay: 1000ms; }
+.animate-fade-in, .animate-fade-in-up, .animate-fade-in-down, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in, .animate-grow, .animate-bounce-in { opacity: 0; }
+.skeleton { background: linear-gradient(90deg, #e8efe0 25%, #d1dfc1 50%, #e8efe0 75%); background-size: 1000px 100%; animation: shimmer 2s linear infinite; }
+.gradient-text { background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); }
+.image-zoom { overflow: hidden; } .image-zoom img { transition: transform 0.5s ease; } .image-zoom:hover img { transform: scale(1.1); }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
