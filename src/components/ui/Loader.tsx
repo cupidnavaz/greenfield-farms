@@ -1,0 +1,1 @@
+export default function Loader({ label = 'Loading...' }: { label?: string }) { return <div className="flex flex-col items-center justify-center py-20"><div className="w-12 h-12 border-4 border-primary-200 border-t-primary-700 rounded-full animate-spin" /><p className="mt-4 text-gray-500 text-sm">{label}</p></div>; }

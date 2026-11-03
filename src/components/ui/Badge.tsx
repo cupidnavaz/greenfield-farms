@@ -1,0 +1,3 @@
+interface BadgeProps { children: React.ReactNode; variant?: 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'danger' | 'gray'; size?: 'sm' | 'md'; }
+const variants = { primary: 'bg-primary-100 text-primary-800', secondary: 'bg-secondary-100 text-secondary-800', accent: 'bg-accent-100 text-accent-800', success: 'bg-green-100 text-green-800', warning: 'bg-amber-100 text-amber-800', danger: 'bg-red-100 text-red-800', gray: 'bg-gray-100 text-gray-700' };
+export default function Badge({ children, variant = 'gray', size = 'sm' }: BadgeProps) { const sizeClass = size === 'sm' ? 'px-2.5 py-0.5 text-xs' : 'px-3 py-1 text-sm'; return <span className={`inline-flex items-center rounded-full font-medium ${variants[variant]} ${sizeClass}`}>{children}</span>; }
